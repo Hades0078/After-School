@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Learning Hub - Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Community Learning Hub</h1>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <p>Explore our range of free courses designed to help you build valuable skills</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="course-filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <input type="text" id="courseSearch" placeholder="Search courses...">
+                        <button id="searchBtn" aria-label="Search courses">Search</button>
+                    </div>
+                    <div class="filter-dropdown">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="technology">Technology</option>
+                            <option value="business">Business</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="language">Language</option>
+                            <option value="arts">Arts & Creativity</option>
+                        </select>
+                    </div>
+                    <div class="filter-dropdown">
+                        <label for="levelFilter">Level:</label>
+                        <select id="levelFilter">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-list">
+            <div class="container">
+                <div id="coursesGrid" class="course-grid">
+                    <!-- These course cards serve as examples; more can be added or loaded dynamically -->
+                    <div class="course-card" data-category="technology" data-level="beginner">
+                        <div class="course-image">
+                            <div class="placeholder-image">Digital Literacy Image</div>
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Introduction to Digital Literacy</h3>
+                            <p class="course-description">Master essential computer skills and digital tools necessary for today's workplace and everyday life.</p>
+                            <div class="course-meta">
+                                <span class="duration">8 weeks</span>
+                                <span class="category">Technology</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="business" data-level="beginner">
+                        <div class="course-image">
+                            <div class="placeholder-image">Financial Literacy Image</div>
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Financial Literacy Basics</h3>
+                            <p class="course-description">Learn fundamental concepts of personal finance, including budgeting, saving, and basic investment principles.</p>
+                            <div class="course-meta">
+                                <span class="duration">6 weeks</span>
+                                <span class="category">Business</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="business" data-level="intermediate">
+                        <div class="course-image">
+                            <div class="placeholder-image">Communication Image</div>
+                            <div class="course-badge intermediate">Intermediate</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Professional Communication</h3>
+                            <p class="course-description">Develop effective communication skills for professional settings, including presentations, emails, and meetings.</p>
+                            <div class="course-meta">
+                                <span class="duration">10 weeks</span>
+                                <span class="category">Business</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="technology" data-level="intermediate">
+                        <div class="course-image">
+                            <div class="placeholder-image">Web Design Image</div>
+                            <div class="course-badge intermediate">Intermediate</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Introduction to Web Design</h3>
+                            <p class="course-description">Learn the fundamentals of HTML, CSS, and responsive web design principles to create your own websites.</p>
+                            <div class="course-meta">
+                                <span class="duration">12 weeks</span>
+                                <span class="category">Technology</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="healthcare" data-level="beginner">
+                        <div class="course-image">
+                            <div class="placeholder-image">Healthcare Image</div>
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Healthcare Fundamentals</h3>
+                            <p class="course-description">Explore basic concepts in healthcare, medical terminology, and patient care principles.</p>
+                            <div class="course-meta">
+                                <span class="duration">8 weeks</span>
+                                <span class="category">Healthcare</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="language" data-level="beginner">
+                        <div class="course-image">
+                            <div class="placeholder-image">English Image</div>
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>English for the Workplace</h3>
+                            <p class="course-description">Develop practical English language skills specifically tailored for professional environments.</p>
+                            <div class="course-meta">
+                                <span class="duration">16 weeks</span>
+                                <span class="category">Language</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="arts" data-level="beginner">
+                        <div class="course-image">
+                            <div class="placeholder-image">Creative Writing Image</div>
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Creative Writing Fundamentals</h3>
+                            <p class="course-description">Explore the basics of storytelling, character development, and narrative structure.</p>
+                            <div class="course-meta">
+                                <span class="duration">8 weeks</span>
+                                <span class="category">Arts & Creativity</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="technology" data-level="advanced">
+                        <div class="course-image">
+                            <div class="placeholder-image">Data Analysis Image</div>
+                            <div class="course-badge advanced">Advanced</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Introduction to Data Analysis</h3>
+                            <p class="course-description">Learn to collect, analyze, and interpret data using spreadsheets and basic statistical concepts.</p>
+                            <div class="course-meta">
+                                <span class="duration">10 weeks</span>
+                                <span class="category">Technology</span>
+                            </div>
+                            <div class="course-footer">
+                                <a href="#" class="btn secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="noCoursesMessage" class="no-results hidden">
+                    <p>No courses match your current filters. Please try different search criteria.</p>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn" data-page="prev">&lt; Previous</button>
+                    <div class="page-numbers">
+                        <span class="page-number active">1</span>
+                        <span class="page-number">2</span>
+                        <span class="page-number">3</span>
+                    </div>
+                    <button class="pagination-btn" data-page="next">Next &gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="become-instructor">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Share Your Knowledge</h2>
+                    <p>Are you an expert in your field? Consider becoming an instructor and help others learn valuable skills.</p>
+                    <a href="contact.html" class="btn primary-btn">Become an Instructor</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Community Learning Hub</h3>
+                    <p>Empowering adults through accessible education and lifelong learning opportunities.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: info@communitylearninghub.org</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Education St, Community City</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Community Learning Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

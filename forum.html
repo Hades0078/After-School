@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Learning Hub - Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Community Learning Hub</h1>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="forum.html" class="active">Forum</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Community Forum</h2>
+            <p>Connect with fellow learners and instructors to discuss course content and share insights</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="forum-controls">
+            <div class="container">
+                <div class="forum-actions">
+                    <div class="search-box">
+                        <input type="text" id="forumSearch" placeholder="Search discussions...">
+                        <button id="forumSearchBtn" aria-label="Search discussions">Search</button>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" id="newTopicBtn" class="btn primary-btn">Start New Discussion</a>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <div class="filter-dropdown">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="general">General Discussion</option>
+                            <option value="tech">Technology</option>
+                            <option value="business">Business</option>
+                            <option value="health">Healthcare</option>
+                            <option value="language">Language</option>
+                            <option value="arts">Arts & Creativity</option>
+                        </select>
+                    </div>
+                    <div class="filter-dropdown">
+                        <label for="sortFilter">Sort By:</label>
+                        <select id="sortFilter">
+                            <option value="recent">Most Recent</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="responses">Most Responses</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forum-content">
+            <div class="container">
+                <div id="newTopicForm" class="new-topic-form hidden">
+                    <h3>Start a New Discussion</h3>
+                    <form id="topicForm">
+                        <div class="form-group">
+                            <label for="topicTitle">Title:</label>
+                            <input type="text" id="topicTitle" placeholder="Enter discussion title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="topicCategory">Category:</label>
+                            <select id="topicCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="general">General Discussion</option>
+                                <option value="tech">Technology</option>
+                                <option value="business">Business</option>
+                                <option value="health">Healthcare</option>
+                                <option value="language">Language</option>
+                                <option value="arts">Arts & Creativity</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="topicContent">Content:</label>
+                            <textarea id="topicContent" placeholder="Enter your question or topic for discussion" rows="5" required></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn primary-btn">Post Discussion</button>
+                            <button type="button" id="cancelTopicBtn" class="btn secondary-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="forum-categories">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="all">All Discussions</button>
+                        <button class="tab-btn" data-category="general">General</button>
+                        <button class="tab-btn" data-category="tech">Technology</button>
+                        <button class="tab-btn" data-category="business">Business</button>
+                        <button class="tab-btn" data-category="health">Healthcare</button>
+                        <button class="tab-btn" data-category="language">Language</button>
+                        <button class="tab-btn" data-category="arts">Arts</button>
+                    </div>
+                </div>
+
+                <div class="forum-discussions">
+                    <div class="discussion-list">
+                        <!-- These discussion items serve as examples; actual forum would load content dynamically -->
+                        <div class="discussion-item" data-category="tech">
+                            <div class="discussion-votes">
+                                <button class="vote-btn upvote" aria-label="Upvote"><span>▲</span></button>
+                                <span class="vote-count">12</span>
+                                <button class="vote-btn downvote" aria-label="Downvote"><span>▼</span></button>
+                            </div>
+                            <div class="discussion-content">
+                                <h3><a href="#">Recommended resources for learning JavaScript as a beginner?</a></h3>
+                                <div class="discussion-meta">
+                                    <span class="category tech">Technology</span>
+                                    <span class="author">Posted by JaneDoe</span>
+                                    <span class="timestamp">2 days ago</span>
+                                </div>
+                                <p class="discussion-excerpt">I'm new to programming and want to learn JavaScript. Does anyone have recommendations for beginner-friendly resources or courses that have helped you?</p>
+                                <div class="discussion-stats">
+                                    <span class="replies"><span class="icon">💬</span> 8 replies</span>
+                                    <span class="views"><span class="icon">👁️</span> 124 views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-item" data-category="general">
+                            <div class="discussion-votes">
+                                <button class="vote-btn upvote" aria-label="Upvote"><span>▲</span></button>
+                                <span class="vote-count">7</span>
+                                <button class="vote-btn downvote" aria-label="Downvote"><span>▼</span></button>
+                            </div>
+                            <div class="discussion-content">
+                                <h3><a href="#">How to balance work and continuing education?</a></h3>
+                                <div class="discussion-meta">
+                                    <span class="category general">General</span>
+                                    <span class="author">Posted by MikeT</span>
+                                    <span class="timestamp">1 week ago</span>
+                                </div>
+                                <p class="discussion-excerpt">I'm finding it challenging to balance my full-time job with taking courses. What strategies have worked for others in similar situations?</p>
+                                <div class="discussion-stats">
+                                    <span class="replies"><span class="icon">💬</span> 12 replies</span>
+                                    <span class="views"><span class="icon">👁️</span> 198 views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-item" data-category="business">
+                            <div class="discussion-votes">
+                                <button class="vote-btn upvote" aria-label="Upvote"><span>▲</span></button>
+                                <span class="vote-count">15</span>
+                                <button class="vote-btn downvote" aria-label="Downvote"><span>▼</span></button>
+                            </div>
+                            <div class="discussion-content">
+                                <h3><a href="#">Best practices for creating a professional resume in 2025</a></h3>
+                                <div class="discussion-meta">
+                                    <span class="category business">Business</span>
+                                    <span class="author">Posted by CareerCoach</span>
+                                    <span class="timestamp">3 days ago</span>
+                                </div>
+                                <p class="discussion-excerpt">The job market has evolved significantly. What are current best practices for creating resumes that stand out to employers and ATS systems?</p>
+                                <div class="discussion-stats">
+                                    <span class="replies"><span class="icon">💬</span> 23 replies</span>
+                                    <span class="views"><span class="icon">👁️</span> 345 views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-item" data-category="health">
+                            <div class="discussion-votes">
+                                <button class="vote-btn upvote" aria-label="Upvote"><span>▲</span></button>
+                                <span class="vote-count">9</span>
+                                <button class="vote-btn downvote" aria-label="Downvote"><span>▼</span></button>
+                            </div>
+                            <div class="discussion-content">
+                                <h3><a href="#">Resources for learning medical terminology</a></h3>
+                                <div class="discussion-meta">
+                                    <span class="category health">Healthcare</span>
+                                    <span class="author">Posted by FutureNurse</span>
+                                    <span class="timestamp">5 days ago</span>
+                                </div>
+                                <p class="discussion-excerpt">I'm interested in pursuing a career in healthcare and need to learn medical terminology. Any recommended resources or study methods?</p>
+                                <div class="discussion-stats">
+                                    <span class="replies"><span class="icon">💬</span> 7 replies</span>
+                                    <span class="views"><span class="icon">👁️</span> 112 views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-item" data-category="language">
+                            <div class="discussion-votes">
+                                <button class="vote-btn upvote" aria-label="Upvote"><span>▲</span></button>
+                                <span class="vote-count">11</span>
+                                <button class="vote-btn downvote" aria-label="Downvote"><span>▼</span></button>
+                            </div>
+                            <div class="discussion-content">
+                                <h3><a href="#">Effective methods for improving business writing skills</a></h3>
+                                <div class="discussion-meta">
+                                    <span class="category language">Language</span>
+                                    <span class="author">Posted by WriterInProgress</span>
+                                    <span class="timestamp">1 day ago</span>
+                                </div>
+                                <p class="discussion-excerpt">I need to improve my business writing for my current job. What are some effective exercises or practices I can use daily?</p>
+                                <div class="discussion-stats">
+                                    <span class="replies"><span class="icon">💬</span> 15 replies</span>
+                                    <span class="views"><span class="icon">👁️</span> 203 views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-item" data-category="arts">
+                            <div class="discussion-votes">
+                                <button class="vote-btn upvote" aria-label="Upvote"><span>▲</span></button>
+                                <span class="vote-count">6</span>
+                                <button class="vote-btn downvote" aria-label="Downvote"><span>▼</span></button>
+                            </div>
+                            <div class="discussion-content">
+                                <h3><a href="#">Overcoming creative blocks in writing projects</a></h3>
+                                <div class="discussion-meta">
+                                    <span class="category arts">Arts</span>
+                                    <span class="author">Posted by CreativeWriter</span>
+                                    <span class="timestamp">4 days ago</span>
+                                </div>
+                                <p class="discussion-excerpt">I often find myself stuck when working on creative writing assignments. What techniques do you use to overcome writer's block?</p>
+                                <div class="discussion-stats">
+                                    <span class="replies"><span class="icon">💬</span> 9 replies</span>
+                                    <span class="views"><span class="icon">👁️</span> 87 views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="noDiscussionsMessage" class="no-results hidden">
+                        <p>No discussions match your current filters. Please try different search criteria or start a new discussion.</p>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn" data-page="prev">&lt; Previous</button>
+                        <div class="page-numbers">
+                            <span class="page-number active">1</span>
+                            <span class="page-number">2</span>
+                            <span class="page-number">3</span>
+                        </div>
+                        <button class="pagination-btn" data-page="next">Next &gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forum-guidelines">
+            <div class="container">
+                <div class="guidelines-box">
+                    <h3>Community Guidelines</h3>
+                    <ul>
+                        <li>Be respectful and supportive of fellow community members</li>
+                        <li>Stay on topic and keep discussions relevant to learning</li>
+                        <li>Avoid sharing personal information in public discussions</li>
+                        <li>Use appropriate language and maintain a professional tone</li>
+                        <li>Give credit when sharing content created by others</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Community Learning Hub</h3>
+                    <p>Empowering adults through accessible education and lifelong learning opportunities.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: info@communitylearninghub.org</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Education St, Community City</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Community Learning Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

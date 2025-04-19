@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Learning Hub - Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Community Learning Hub</h1>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Learning Resources</h2>
+            <p>Access free educational materials to support your learning journey</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="resources-filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <input type="text" id="resourceSearch" placeholder="Search resources...">
+                        <button id="resourceSearchBtn" aria-label="Search resources">Search</button>
+                    </div>
+                    <div class="filter-dropdown">
+                        <label for="resourceTypeFilter">Resource Type:</label>
+                        <select id="resourceTypeFilter">
+                            <option value="all">All Types</option>
+                            <option value="pdf">PDF Documents</option>
+                            <option value="video">Video Tutorials</option>
+                            <option value="article">Articles</option>
+                            <option value="template">Templates</option>
+                        </select>
+                    </div>
+                    <div class="filter-dropdown">
+                        <label for="resourceTopicFilter">Topic:</label>
+                        <select id="resourceTopicFilter">
+                            <option value="all">All Topics</option>
+                            <option value="technology">Technology</option>
+                            <option value="business">Business</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="language">Language</option>
+                            <option value="arts">Arts & Creativity</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources-categories">
+            <div class="container">
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-target="allResources">All Resources</button>
+                        <button class="tab-btn" data-target="pdfResources">PDF Documents</button>
+                        <button class="tab-btn" data-target="videoResources">Video Tutorials</button>
+                        <button class="tab-btn" data-target="articleResources">Articles</button>
+                    </div>
+
+                    <div id="allResources" class="tab-content active">
+                        <div class="resources-grid">
+                            <!-- PDF Resources -->
+                            <div class="resource-card" data-type="pdf" data-topic="technology">
+                                <div class="resource-icon pdf-icon">PDF</div>
+                                <div class="resource-content">
+                                    <h3>Digital Literacy Handbook</h3>
+                                    <p>A comprehensive guide to essential computer skills for beginners.</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">PDF Document</span>
+                                        <span class="file-size">2.4 MB</span>
+                                    </div>
+                                    <a href="#" class="btn secondary-btn" download>Download PDF</a>
+                                </div>
+                            </div>
+
+                            <div class="resource-card" data-type="pdf" data-topic="business">
+                                <div class="resource-icon pdf-icon">PDF</div>
+                                <div class="resource-content">
+                                    <h3>Financial Planning Worksheet</h3>
+                                    <p>Templates and tools for creating personal and family budgets.</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">PDF Document</span>
+                                        <span class="file-size">1.2 MB</span>
+                                    </div>
+                                    <a href="#" class="btn secondary-btn" download>Download PDF</a>
+                                </div>
+                            </div>
+
+                            <!-- Video Resources -->
+                            <div class="resource-card" data-type="video" data-topic="technology">
+                                <div class="resource-icon video-icon">VIDEO</div>
+                                <div class="resource-content">
+                                    <h3>Introduction to Spreadsheets</h3>
+                                    <p>Learn the basics of using spreadsheets for data organization and analysis.</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Video Tutorial</span>
+                                        <span class="duration">45 minutes</span>
+                                    </div>
+                                    <a href="#" class="btn secondary-btn">Watch Video</a>
+                                </div>
+                            </div>
+
+                            <div class="resource-card" data-type="video" data-topic="healthcare">
+                                <div class="resource-icon video-icon">VIDEO</div>
+                                <div class="resource-content">
+                                    <h3>Basic First Aid Techniques</h3>
+                                    <p>Essential first aid skills everyone should know for emergency situations.</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Video Tutorial</span>
+                                        <span class="duration">32 minutes</span>
+                                    </div>
+                                    <a href="#" class="btn secondary-btn">Watch Video</a>
+                                </div>
+                            </div>
+
+                            <!-- Articles -->
+                            <div class="resource-card" data-type="article" data-topic="business">
+                                <div class="resource-icon article-icon">ARTICLE</div>
+                                <div class="resource-content">
+                                    <h3>Resume Writing Tips for Career Changers</h3>
+                                    <p>Strategies for highlighting transferable skills when changing career paths.</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Article</span>
+                                        <span class="read-time">12 min read</span>
+                                    </div>
+                                    <a href="#" class="btn secondary-btn">Read Article</a>
+                                </div>
+                            </div>
+
+                            <div class="resource-card" data-type="article" data-topic="language">
+                                <div class="resource-icon article-icon">ARTICLE</div>
+                                <div class="resource-content">
+                                    <h3>Effective Communication in Multicultural Workplaces</h3>
+                                    <p>Tips for navigating cultural differences in professional communication.</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Article</span>
+                                        <span class="read-time">8 min read</span>
+                                    </div>
+                                    <a href="#" class="btn secondary-btn">Read Article</a>
+                                </div>
+                            </div>
+
+                            <!-- Templates -->
+                            <div class="resource-card" data-type="template" data-topic="business">
+                                <div class="resource-icon template-icon">TEMPLATE</div>
+                                <div class="resource-content">
+                                    <h3>Project Management Templates</h3>
+                                    <p>A collection of templates for planning and tracking project progress.</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Template Pack</span>
+                                        <span class="file-size">3.5 MB</span>
+                                    </div>
+                                    <a href="#" class="btn secondary-btn" download>Download Templates</a>
+                                </div>
+                                <div class="resource-card" data-type="template" data-topic="arts">
+                                    <div class="resource-icon template-icon">TEMPLATE</div>
+                                    <div class="resource-content">
+                                        <h3>Creative Writing Prompts and Exercises</h3>
+                                        <p>Worksheets and exercises to develop creative writing skills and overcome writer's block.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Template Pack</span>
+                                            <span class="file-size">1.8 MB</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn" download>Download Templates</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="pdfResources" class="tab-content">
+                            <div class="resources-grid">
+                                <!-- PDF Resources Only -->
+                                <div class="resource-card" data-type="pdf" data-topic="technology">
+                                    <div class="resource-icon pdf-icon">PDF</div>
+                                    <div class="resource-content">
+                                        <h3>Digital Literacy Handbook</h3>
+                                        <p>A comprehensive guide to essential computer skills for beginners.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">PDF Document</span>
+                                            <span class="file-size">2.4 MB</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn" download>Download PDF</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="pdf" data-topic="business">
+                                    <div class="resource-icon pdf-icon">PDF</div>
+                                    <div class="resource-content">
+                                        <h3>Financial Planning Worksheet</h3>
+                                        <p>Templates and tools for creating personal and family budgets.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">PDF Document</span>
+                                            <span class="file-size">1.2 MB</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn" download>Download PDF</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="pdf" data-topic="healthcare">
+                                    <div class="resource-icon pdf-icon">PDF</div>
+                                    <div class="resource-content">
+                                        <h3>Health and Wellness Guide</h3>
+                                        <p>Information on maintaining physical and mental health for adults of all ages.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">PDF Document</span>
+                                            <span class="file-size">3.1 MB</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn" download>Download PDF</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="pdf" data-topic="language">
+                                    <div class="resource-icon pdf-icon">PDF</div>
+                                    <div class="resource-content">
+                                        <h3>Business English Phrasebook</h3>
+                                        <p>Common phrases and vocabulary for professional communication in English.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">PDF Document</span>
+                                            <span class="file-size">1.7 MB</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn" download>Download PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="videoResources" class="tab-content">
+                            <div class="resources-grid">
+                                <!-- Video Resources Only -->
+                                <div class="resource-card" data-type="video" data-topic="technology">
+                                    <div class="resource-icon video-icon">VIDEO</div>
+                                    <div class="resource-content">
+                                        <h3>Introduction to Spreadsheets</h3>
+                                        <p>Learn the basics of using spreadsheets for data organization and analysis.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Video Tutorial</span>
+                                            <span class="duration">45 minutes</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Watch Video</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="video" data-topic="healthcare">
+                                    <div class="resource-icon video-icon">VIDEO</div>
+                                    <div class="resource-content">
+                                        <h3>Basic First Aid Techniques</h3>
+                                        <p>Essential first aid skills everyone should know for emergency situations.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Video Tutorial</span>
+                                            <span class="duration">32 minutes</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Watch Video</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="video" data-topic="business">
+                                    <div class="resource-icon video-icon">VIDEO</div>
+                                    <div class="resource-content">
+                                        <h3>Interview Preparation Guide</h3>
+                                        <p>Tips and techniques for succeeding in job interviews.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Video Tutorial</span>
+                                            <span class="duration">38 minutes</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Watch Video</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="video" data-topic="arts">
+                                    <div class="resource-icon video-icon">VIDEO</div>
+                                    <div class="resource-content">
+                                        <h3>Creative Writing Workshop</h3>
+                                        <p>Learn storytelling techniques from experienced writers.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Video Tutorial</span>
+                                            <span class="duration">67 minutes</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Watch Video</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="articleResources" class="tab-content">
+                            <div class="resources-grid">
+                                <!-- Article Resources Only -->
+                                <div class="resource-card" data-type="article" data-topic="business">
+                                    <div class="resource-icon article-icon">ARTICLE</div>
+                                    <div class="resource-content">
+                                        <h3>Resume Writing Tips for Career Changers</h3>
+                                        <p>Strategies for highlighting transferable skills when changing career paths.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Article</span>
+                                            <span class="read-time">12 min read</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Read Article</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="article" data-topic="language">
+                                    <div class="resource-icon article-icon">ARTICLE</div>
+                                    <div class="resource-content">
+                                        <h3>Effective Communication in Multicultural Workplaces</h3>
+                                        <p>Tips for navigating cultural differences in professional communication.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Article</span>
+                                            <span class="read-time">8 min read</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Read Article</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="article" data-topic="technology">
+                                    <div class="resource-icon article-icon">ARTICLE</div>
+                                    <div class="resource-content">
+                                        <h3>Protecting Your Digital Privacy</h3>
+                                        <p>Simple steps to enhance your online security and protect personal information.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Article</span>
+                                            <span class="read-time">15 min read</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Read Article</a>
+                                    </div>
+                                </div>
+    
+                                <div class="resource-card" data-type="article" data-topic="healthcare">
+                                    <div class="resource-icon article-icon">ARTICLE</div>
+                                    <div class="resource-content">
+                                        <h3>Mental Health Self-Care Strategies</h3>
+                                        <p>Practical techniques for managing stress and maintaining mental wellbeing.</p>
+                                        <div class="resource-meta">
+                                            <span class="resource-type">Article</span>
+                                            <span class="read-time">10 min read</span>
+                                        </div>
+                                        <a href="#" class="btn secondary-btn">Read Article</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="noResourcesMessage" class="no-results hidden">
+                        <p>No resources match your current filters. Please try different search criteria.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="contribute-resources">
+                <div class="container">
+                    <div class="cta-box">
+                        <h2>Contribute Your Knowledge</h2>
+                        <p>Have educational materials to share? Submit your resources to help expand our community library.</p>
+                        <a href="contact.html" class="btn primary-btn">Submit Resources</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Community Learning Hub</h3>
+                        <p>Empowering adults through accessible education and lifelong learning opportunities.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="forum.html">Forum</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Information</h3>
+                        <p>Email: info@communitylearninghub.org</p>
+                        <p>Phone: (123) 456-7890</p>
+                        <p>Address: 123 Education St, Community City</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="#" aria-label="Twitter">Twitter</a>
+                            <a href="#" aria-label="Instagram">Instagram</a>
+                            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Community Learning Hub. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </html>
