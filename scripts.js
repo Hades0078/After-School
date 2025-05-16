@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initNewsletterForm();
     initFeaturedCourses();
+    handleResourceDownload();
 });
 
 // Mobile Menu Functionality
@@ -276,5 +277,82 @@ window.addEventListener('load', function() {
         heroSection.style.animation = 'fadeIn 1s ease-out';
     }
 });
+
+// Resource Download Handler
+function handleResourceDownload() {
+    // Get all download buttons
+    const downloadButtons = document.querySelectorAll('a[download]');
+    
+    // Add click event listeners to download buttons
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Get the resource card containing this button
+            const resourceCard = button.closest('.resource-card');
+            
+            // Get resource information
+            const resourceTitle = resourceCard.querySelector('h3').textContent;
+            const resourceType = resourceCard.getAttribute('data-type');
+            
+            // Generate the file name based on the title
+            const fileName = `${resourceTitle.toLowerCase().replace(/\s+/g, '-')}.${resourceType}`;
+            
+            // Get the resource path - this should be replaced with actual file paths
+            const resourcePath = `/resources/${resourceType}s/${fileName}`;
+            
+            // Show loading state
+            const originalText = button.textContent;
+            button.textContent = 'Downloading...';
+            button.style.opacity = '0.7';
+            
+            // Initiate download
+            handleResourceDownload(resourcePath, fileName)
+                .finally(() => {
+                    // Reset button state
+                    button.textContent = originalText;
+                    button.style.opacity = '1';
+                });
+        });
+    });
+
+    // Add visual feedback on hover
+    downloadButtons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+            button.style.transition = 'all 0.3s ease';
+        });
+
+        button.addEventListener('mouseout', () => {
+            button.style.transform = 'translateY(0)';
+            button.style.boxShadow = 'none';
+        });
+    });
+}
+
+// Add necessary CSS for download button animations
+const style = document.createElement('style');
+style.textContent = `
+    .resource-card .btn[download] {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .resource-card .btn[download]::after {
+        content: '⬇';
+        position: absolute;
+        right: 1rem;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: all 0.3s ease;
+    }
+
+    .resource-card .btn[download]:hover::after {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`;
+document.head.appendChild(style);
   
   
